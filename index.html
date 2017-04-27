@@ -11,10 +11,18 @@
 	<ol>
 		<div id="lista"></div>
 	</ol>
+
+	<p>
+		<label for="tareaNueva">Ingrese nueva tarea</label>
+		<input type="text" id="tareaNueva"> <!-- ingreso de tarea nueva -->
+		<button id="botoncillo" onclick="agregarTarea()">Añadir tarea</button><br> <!--boton para agregar tarea-->
+	</p>
 	
-	<label for="tareaNueva">Ingrese nueva tarea</label>
-	<input type="text" id="tareaNueva"> <!-- ingreso de tarea nueva -->
-	<button id="botoncillo" onclick="agregarTarea()">Añadir tarea</button> <!--boton para agregar tarea-->
+	<p>
+		<label for="editar">Ingrese número de tarea a editar</label>
+		<input type="text" id="editar"> <!-- ingreso de id a editar -->
+		<button id="botonEdit" onclick="editarTarea()">Editar</button><br> <!-- esta parte no funciona -->
+	</p>
 	
 	<script type="text/javascript" src="js/data.js"></script> <!-- JSON -->
 	<script type="text/javascript" src="js/main.js"></script> <!-- main -->
