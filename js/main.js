@@ -1,17 +1,19 @@
 
-var primeros10 = [];
+var primeros10 = []; // en este array se almacenan las 10 primeras tareas del JSON y las que agregue el usuario
 var list = document.getElementById("lista");
 for (i=0 ; i<10 ; i++){
 	primeros10.push(arregloTareas[i]);
-	list.innerHTML += "<li>" + primeros10[i].title + "</li>";
-}
+	list.innerHTML += "<li>" + "<button>Editar</button>" + " " + primeros10[i].title + "</li>";
+} // se enlistan los 10 primeros y se enlazan con el id del div de HTML
 
 //lista10 = primeros10.forEach(function(element){"<ul>" + "<li>" + element.title + "</li>" + "</ul>";})
 
 
 function agregarTarea(){
+
 	var newWork = document.getElementById("tareaNueva");
 
+	// se crea el constructor Tarea, al cual se le asignara los mismos atributos del objeto JSON
 	function Tarea(userId,id,title,completed){
 		this.userId = userId;
 		this.id = id;
@@ -19,10 +21,14 @@ function agregarTarea(){
 		this.completed = completed;
 	}
 
+	// se crea el obteto tareaExtra, para agregarlo al arreglo primeros10
 	var tareaExtra = new Tarea(1,primeros10.length+1,newWork.value,false); //porque se supone que son tareas pendientes
-	primeros10.push(tareaExtra);
+	primeros10.push(tareaExtra); //agrega el objeto 
 
+	// se rescata la propiedad title del nuevo objeto y se agrega a la lista
 	var list = document.getElementById("lista");
-	list.innerHTML += "<li>" + primeros10[primeros10.length-1].title + "</li>";
+	list.innerHTML += "<li>" + "<button>Editar</button>" + " " + primeros10[primeros10.length-1].title + "</li>";
 	newWork.value = "";
 }
+
+

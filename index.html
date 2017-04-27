@@ -6,15 +6,17 @@
 </head>
 <body>
 	<h1>To-do List</h1>
+
+	<!-- Creamos la lista con un div, el cual contiene un id que sera llamado desde main.js -->
 	<ol>
 		<div id="lista"></div>
 	</ol>
 	
-	<label for="tareaNueva">Nueva tarea</label>
-	<input type="text" id="tareaNueva">
-	<button id="botoncillo" onclick="agregarTarea()">Añadir</button>
+	<label for="tareaNueva">Ingrese nueva tarea</label>
+	<input type="text" id="tareaNueva"> <!-- ingreso de tarea nueva -->
+	<button id="botoncillo" onclick="agregarTarea()">Añadir tarea</button> <!--boton para agregar tarea-->
 	
-	<script type="text/javascript" src="js/data.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/data.js"></script> <!-- JSON -->
+	<script type="text/javascript" src="js/main.js"></script> <!-- main -->
 </body>
 </html>
