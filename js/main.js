@@ -24,4 +24,5 @@ function agregarTarea(){
 
 	var list = document.getElementById("lista");
 	list.innerHTML += "<li>" + primeros10[primeros10.length-1].title + "</li>";
+	newWork.value = "";
 }
