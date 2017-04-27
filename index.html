@@ -6,11 +6,13 @@
 </head>
 <body>
 	<h1>To-do List</h1>
-
-	<div id="lista"></div>
-
+	<ol>
+		<div id="lista"></div>
+	</ol>
+	
+	<label for="tareaNueva">Nueva tarea</label>
 	<input type="text" id="tareaNueva">
-	<button id="botoncillo">Añadir tarea</button>
+	<button id="botoncillo" onclick="agregarTarea()">Añadir</button>
 	
 	<script type="text/javascript" src="js/data.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
